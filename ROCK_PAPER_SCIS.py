@@ -1,3 +1,10 @@
+# ROCK PAPER SCISSORS
+# YOU CAN CONTACT ME @ https://discord.com/users/976932346550972477
+
+# THIS IS V2 OF A CS PROJECT
+# BY ROMEU
+
+plays = ["r", "p", "s"] # THE PLAYS ALLOWED IN THE GAME
 a = True
 while a:
     # --- INTRO ---
@@ -7,7 +14,8 @@ while a:
     To play ROCK - write 'r'
     To play PAPER - write 'p'")
     To play SCISSORS - write 's")
-    That's it have fun! <3""")
+    That's it have fun! <3
+    """)
 
     # --- INITIALIZATION ---
 
@@ -15,21 +23,28 @@ while a:
     p2 = str(input("PLAYER 2 - PLAY : "))
 
     # --- VERIFICATION ---
-
-    if p1 == p2:
-        print("PLAYER 1 AND 2 - DRAW")
-    elif p1 == "r" and p2 == "p":
-        print("PLAYER 2 - WINS")
-    elif p1 == "r" and p2 == "s":
-        print("PLAYER 1 - WINS")
-    elif p1 == "p" and p2 == "r":
-        print("PLAYER 1 - WINS")
-    elif p1 == "p" and p2 == "s":
-        print("PLAYER 2 - WINS")
-    elif p1 == "s" and p2 == "r":
-        print("PLAYER 2 - WINS")
-    elif p1 == "s" and p2 == "p":
-        print("PLAYER 1 - WINS")
+    if p1 in plays and p2 in plays:
+        if p1 == p2:
+            print("PLAYER 1 AND 2 - DRAW")
+        elif p1 == "r" and p2 == "p":
+            print("PLAYER 2 - WINS")
+        elif p1 == "r" and p2 == "s":
+            print("PLAYER 1 - WINS")
+        elif p1 == "p" and p2 == "r":
+            print("PLAYER 1 - WINS")
+        elif p1 == "p" and p2 == "s":
+            print("PLAYER 2 - WINS")
+        elif p1 == "s" and p2 == "r":
+            print("PLAYER 2 - WINS")
+        elif p1 == "s" and p2 == "p":
+            print("PLAYER 1 - WINS")
+    else:
+        print("""
+        Please use the allowed plays:
+        - Rock - "w" 
+        - Paper - "p"
+        - Scissors - "s"
+        """)
 
     # --- LOOP BREAKER ---
     cp = str(input("WOULD YOU LIKE TO CONTINUE PLAYING? (y/n): "))
